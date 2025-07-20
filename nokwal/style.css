@@ -1,0 +1,271 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 1em 0;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb400;
+}
+
+.logo {
+  color: #ffb400;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('images/sunset-home.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4em;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5em;
+}
+
+.cta {
+  background-color: #ffb400;
+  color: black;
+  padding: 0.75em 2em;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #e6a000;
+}
+
+/* Sections */
+.section {
+  padding: 6em 0 4em;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffb400;
+  margin: 0.5em auto 0;
+  border-radius: 2px;
+}
+
+/* Portfolio */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.categories .filter-btn {
+  padding: 0.5em 1.2em;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.categories .filter-btn:hover {
+  background: #444;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-item {
+  background: #f0f0f0;
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.3s ease;
+}
+
+.service-item:hover {
+  background: #fffbf0;
+}
+
+/* About */
+.about p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Testimonials */
+.testimonial {
+  background: #fdfdfd;
+  border-left: 5px solid #ffb400;
+  padding: 1.5em;
+  margin: 1em auto;
+  border-radius: 5px;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 1em;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Contact */
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact input, .contact textarea {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1rem;
+}
+
+.contact button {
+  background-color: #000;
+  color: #fff;
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .cta {
+    padding: 0.6em 1.5em;
+  }
+}

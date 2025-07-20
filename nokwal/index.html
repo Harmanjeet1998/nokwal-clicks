@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nokwal Clicks | Real Estate Photography</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="hero" id="home">
+  <header class="hero-video-wrapper" id="home">
+    <video autoplay muted loop playsinline>
+      <source src="videos/real-estate 2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <nav class="navbar">
       <div class="container">
-        <div class="logo">Nokwal Clicks</div>
+        <div class="logo">📸 Nokwal Clicks</div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">☰</label>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -23,6 +32,7 @@
         </ul>
       </div>
     </nav>
+
     <div class="hero-content">
       <h1>Capturing Properties to Sell Faster</h1>
       <p>Visuals that make your listings stand out</p>
@@ -41,10 +51,11 @@
           <button class="filter-btn">Aerial Shots</button>
         </div>
         <div class="gallery">
-          <img src="images/house1.jpg" alt="Exterior">
-          <img src="images/interior1.jpg" alt="Interior">
-          <img src="images/video1.jpg" alt="Video Tour">
-          <img src="images/aerial1.jpg" alt="Aerial">
+          <img src="images/house1.jpg" alt="Exterior" />
+          <img src="images/1.jpg" alt="Interior" />
+          <img src="images/2.jpg" alt="Video Tour" />
+          <img src="images/3.jpg" alt="Aerial" />
+		  <img src="images/5.jpg" />
         </div>
       </div>
     </section>
@@ -66,7 +77,11 @@
     <section id="about" class="section about">
       <div class="container">
         <h2 class="section-title">Who We Are</h2>
-        <p>Nokwal Clicks is a premier real estate photography brand delivering compelling visuals to boost property sales. With a team of experienced photographers and cutting-edge equipment, we help you capture listings in the best light—literally.</p>
+        <p>
+          Nokwal Clicks is a premier real estate photography brand delivering compelling visuals to
+          boost property sales. With a team of experienced photographers and cutting-edge
+          equipment, we help you capture listings in the best light—literally.
+        </p>
       </div>
     </section>
 
@@ -87,14 +102,65 @@
     <section id="contact" class="section contact">
       <div class="container">
         <h2 class="section-title">Get in Touch</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message"></textarea>
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          id="contact-form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message"></textarea>
           <button type="submit">Send Message</button>
         </form>
+        <p id="form-message" class="form-message"></p>
       </div>
     </section>
+	
+	<section id="packages" class="section packages">
+  <div class="container">
+    <h2 class="section-title">Our Packages</h2>
+    <p class="package-intro">
+      Choose the perfect photography package for your needs and budget.
+    </p>
+    <div class="packages-grid">
+      <div class="package-card">
+        <h3>Basic Package</h3>
+        <p class="price">$200</p>
+        <ul>
+          <li>Ideal for small listings or quick shoots.</li>
+          <li>Up to 20 high-resolution images</li>
+          <li>1-hour shoot</li>
+          <li>Basic editing included</li>
+        </ul>
+        <button class="select-btn">Select Basic</button>
+      </div>
+      <div class="package-card">
+        <h3>Standard Package</h3>
+        <p class="price">$350</p>
+        <ul>
+          <li>Perfect for mid-sized properties with more detail.</li>
+          <li>Up to 40 high-resolution images</li>
+          <li>2-hour shoot</li>
+          <li>Advanced editing and color correction</li>
+          <li>Virtual tour included</li>
+        </ul>
+        <button class="select-btn">Select Standard</button>
+      </div>
+      <div class="package-card">
+        <h3>Premium Package</h3>
+        <p class="price">$500</p>
+        <ul>
+          <li>Comprehensive coverage for luxury listings.</li>
+          <li>Up to 60 high-resolution images</li>
+          <li>3-hour shoot</li>
+          <li>Drone photography included</li>
+          <li>Virtual tour and floor plan</li>
+        </ul>
+        <button class="select-btn">Select Premium</button>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer>
